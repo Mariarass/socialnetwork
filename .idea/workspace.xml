@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="74e830c7-e3be-43bf-8f0c-24e9f5c2ce15" name="Changes" comment="3">
+      <change afterPath="$PROJECT_DIR$/src/HOC/withAuthRedirect.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Profile/Description/SpanInput/SpanInput.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Profile/Post/ItemPost/ItemPost.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Profile/Post/Post.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Profile/ProfileContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/reducers/profile-reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/selectors/profile-selectors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/selectors/user-selectors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API/API.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/API.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Dialog/DialogContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Dialog/DialogContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Login/Login.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Login/Login.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/SideBar/SideBarContainer.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/user-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/user-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/selectors/auth-selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectors/auth-selectors.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2HwZ6RIIgmRQxeTg9VifpUcxnuw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/maria_87/Desktop/учеба/incubator/socialnetwork",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "duplicates.index",
+    "ts.external.directory.path": "C:\\Users\\maria_87\\WebstormProjects\\socialnetwork\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\maria_87\WebstormProjects\socialnetwork" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.npm start">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="74e830c7-e3be-43bf-8f0c-24e9f5c2ce15" name="Changes" comment="" />
+      <created>1669197930321</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669197930321</updated>
+      <workItem from="1669197931600" duration="283000" />
+      <workItem from="1669198253802" duration="622000" />
+      <workItem from="1669199058396" duration="414000" />
+      <workItem from="1669199491574" duration="4692000" />
+      <workItem from="1669272950494" duration="14955000" />
+      <workItem from="1669804605286" duration="3765000" />
+      <workItem from="1670086146041" duration="490000" />
+      <workItem from="1670397117610" duration="864000" />
+      <workItem from="1670398142639" duration="4509000" />
+      <workItem from="1670402721632" duration="1396000" />
+      <workItem from="1670404151740" duration="248000" />
+      <workItem from="1670404455810" duration="7865000" />
+      <workItem from="1670416401433" duration="5897000" />
+      <workItem from="1670475958974" duration="7159000" />
+      <workItem from="1670928181264" duration="5091000" />
+      <workItem from="1670956245759" duration="241000" />
+      <workItem from="1670957366560" duration="73000" />
+      <workItem from="1671001452441" duration="15457000" />
+      <workItem from="1671077807745" duration="4844000" />
+      <workItem from="1671092732107" duration="13000" />
+      <workItem from="1671100821059" duration="987000" />
+      <workItem from="1671121600653" duration="19000" />
+      <workItem from="1671193405635" duration="101000" />
+      <workItem from="1671193684890" duration="29000" />
+      <workItem from="1671265861014" duration="627000" />
+      <workItem from="1671880630585" duration="815000" />
+      <workItem from="1672124920792" duration="3355000" />
+      <workItem from="1672132920484" duration="303000" />
+      <workItem from="1672762181633" duration="636000" />
+      <workItem from="1672820196084" duration="240000" />
+      <workItem from="1672823772281" duration="213000" />
+      <workItem from="1672824003974" duration="176000" />
+      <workItem from="1672824534531" duration="55000" />
+      <workItem from="1672828463575" duration="333000" />
+      <workItem from="1672920511645" duration="318000" />
+    </task>
+    <task id="LOCAL-00001" summary="2">
+      <created>1670405467593</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670405467593</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2" />
+    <option name="LAST_COMMIT_MESSAGE" value="2" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/component/Users/User/User.tsx</url>
+          <line>12</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/component/Users/Users.tsx</url>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/redux/reducers/user-reducer.ts</url>
+          <line>141</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/redux/reducers/user-reducer.ts</url>
+          <line>72</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/component/Profile/Profile.tsx</url>
+          <line>10</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/component/Profile/Description/Description.tsx</url>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/component/Users/User/User.tsx</url>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/redux/store.ts</url>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

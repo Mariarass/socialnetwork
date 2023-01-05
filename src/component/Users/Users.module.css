@@ -1,0 +1,43 @@
+.userContainer{
+
+    width: 70%;
+
+    padding-top: 40px;
+
+}
+.userItem{
+
+    margin-bottom: 10px;
+}
+.linkUser{
+    display: flex;
+
+    gap: 10px;
+
+    text-decoration: none;
+    color: #2a2929;
+}
+.name{
+    font-weight: bolder;
+
+    margin: 0;
+}
+.description{
+
+}
+.status{
+
+    margin-top :5px}
+.page{
+
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.progress{
+
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

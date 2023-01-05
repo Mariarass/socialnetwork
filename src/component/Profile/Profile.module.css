@@ -1,0 +1,121 @@
+.DescriptionContainer {
+
+    display: flex;
+    align-items: center;
+    margin: 0;
+    gap: 30px;
+    font-size: large;
+    height: 200px;
+
+
+
+}
+.progress{
+
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileContainer {
+
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+
+}
+
+.img {
+    width: 120px;
+    border-radius: 50%;
+}
+
+.subContainer {
+
+    display: flex;
+    color: #828282;
+    gap: 20px;
+
+}
+
+.buy {
+    display: flex;
+    gap: 20px;
+
+
+}
+
+.name {
+
+
+}
+
+.description {
+
+
+}
+
+.textDes {
+    color: #837478;
+    margin: 0;
+    cursor: pointer;
+
+
+}
+
+.tab {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 700px;
+
+}
+
+.add {
+    width: 20px;
+}
+
+.lineContainer {
+display: flex;
+    justify-content: center;
+
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 700px;
+
+
+
+  
+}
+.lineContainerEmpty{
+
+    width: 700px;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.photoItem {
+    width: 220px;
+    height: 220px;
+
+    cursor: pointer;
+
+}
+
+.input {
+
+    outline: none;
+
+}
+
+.status {
+
+    height: 34px;
+    margin: 0;
+
+
+}

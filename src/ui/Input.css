@@ -1,0 +1,24 @@
+.inputDefault {
+    width: 100%;
+    height: 85%;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+
+}
+.inputSearch{
+    width:80%;
+    height:50%;
+    border-radius: 8px;
+    outline: none;
+    background-color: #ebecef;
+    border: none;
+    padding-left: 10px;
+
+
+}
+.inputModal{
+width: 350px;
+    height: 340px;
+
+}

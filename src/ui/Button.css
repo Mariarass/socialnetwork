@@ -1,0 +1,19 @@
+.button{
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: #828282;
+    font-family: 'Averia Gruesa Libre', cursive;
+    font-size: large;
+
+}
+.button_active{
+    background-color: #FFD0D6;
+    border-radius: 50px;
+    height: 30px;
+    margin-right: 20px;
+    color: white;
+
+}
+
