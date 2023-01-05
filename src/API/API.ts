@@ -20,12 +20,38 @@ export const userAPI = {
 
     deleteFollow: (id: string) => {
 
-        return instance.delete(`follow/${id}`).then(res=>res.data)
+        return instance.delete(`follow/${id}`).then(res => res.data)
     },
     postFollow: (id: string) => {
 
-        return instance.post(`follow/${id}`).then(res=>res.data)
+        return instance.post(`follow/${id}`).then(res => res.data)
     },
 
+    getUser: (id: number, myId: number | null) => {
+
+
+        return instance.get(`profile/${id != null ? id : myId}`).then((res) => res.data)
+
+    },
+    getStatus: (id: number, myId: number | null) => {
+
+        return instance.get(`profile/status/${id != null ? id : myId}`).then((res) => res.data)
+
+    },
+    updateStatus: (status: string) => {
+        return instance.put(`profile/status`, {status}).then((res) => res.data)
+
+    },
+    getAuth: () => {
+        return instance.get(`auth/me`).then((res) => res.data)
+    },
+    login: (email: string, password: string, rememberMe: boolean) => {
+        return instance.post(`auth/login`, {email, password, rememberMe}).then(res => res.data)
+
+
+    },
+    logout: () => {
+        return instance.delete(`auth/login`).then(res => res.data)
+    }
 
 }

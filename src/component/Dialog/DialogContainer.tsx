@@ -1,32 +1,29 @@
-import React, {useEffect} from 'react';
-
-
-import {useSelector} from "react-redux";
-import {isAuthSelector} from "../../redux/selectors/auth-selectors";
-import {useNavigate} from "react-router-dom";
+import React from 'react';
 import {Dialog} from './Dialog';
+import {withRedirect} from "../../HOC/withAuthRedirect";
 
 const DialogContainer = () => {
 
-        const higherOrderComponent =(WrappedComponent:any) => {
-            const  HOC=()=>{
-                const isAuth=useSelector(isAuthSelector)
-                const navigate=useNavigate()
-                useEffect(()=>{
-                    if(!isAuth){
-                    navigate('/login')}
+     /*   const withRedirect = (WrappedComponent: any) => {
+            const ComponentWithRedirect = () => {
+                const isAuth = useSelector(isAuthSelector)
+                const navigate = useNavigate()
+                useEffect(() => {
+                    if (!isAuth) {
+                        navigate('/login')
+                    }
                 })
 
                 return WrappedComponent
             }
 
-            return HOC
-        }
-    const SimpleHOC = higherOrderComponent(<Dialog/>);
+            return ComponentWithRedirect
+        }*/
+        const DialogWidthRedirect = withRedirect(<Dialog/>);
 
         return (
             <div>
-                <SimpleHOC/>
+                <DialogWidthRedirect/>
 
 
             </div>

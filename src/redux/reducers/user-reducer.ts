@@ -1,7 +1,7 @@
 import {userAPI} from "../../API/API";
 import {Action, AnyAction, Dispatch} from "redux";
-import { ThunkAction } from 'redux-thunk'
-import {AppRootStateType} from "../store";
+import {ThunkAction} from 'redux-thunk'
+import {AppRootStateType, AppThunk} from "../store";
 
 const SET_USER = 'SET-USER'
 const SET_TOTAL_COUNT = 'SET-TOTAL-COUNT'
@@ -9,6 +9,7 @@ const SET_CURRENT_PAGE = 'SET-CURRENT-PAGE'
 const FOLLOW = 'FOLLOW'
 const UNFOLLOW = 'UNFOLLOW'
 const TOGGLE_IS_FOLLOWING = 'TOGGLE-IS-FOLLOWING'
+const IS_FETCHING = 'IS-FETCHING'
 
 
 export type UserType = {
@@ -21,7 +22,8 @@ export type UserType = {
 export type UserReducerType = {
     user: UserType[]
     totalUserCount: number
-    currentPage: number
+    currentPage: number,
+    isFetching: boolean
     followingInProgress: string[]
 }
 
@@ -29,6 +31,7 @@ const initialState: UserReducerType = {
     user: [],
     totalUserCount: 0,
     currentPage: 1,
+    isFetching: false,
     followingInProgress: []
 }
 
@@ -37,9 +40,17 @@ type TypeSetTotalCountAC = ReturnType<typeof setTotalCountAC>
 type TypeSetCurrentPageAC = ReturnType<typeof setCurrentPageAC>
 type TypeFollowAC = ReturnType<typeof setFollowAC>
 type TypeUnfollowAC = ReturnType<typeof setUnfollowAC>
+type TypeIsFetching = ReturnType<typeof isFetchingAC>
+type TypeToggleIsFollowingAC = ReturnType<typeof toggleIsFollowingAC>
 
 
-type ActionType = TypeSetUserAC | TypeSetTotalCountAC | TypeSetCurrentPageAC | TypeFollowAC | TypeUnfollowAC
+export type ActionTypeUser = TypeSetUserAC |
+    TypeSetTotalCountAC |
+    TypeSetCurrentPageAC |
+    TypeFollowAC |
+    TypeUnfollowAC |
+    TypeIsFetching |
+    TypeToggleIsFollowingAC
 
 export const userReducer = (state = initialState, action: any) => {//???????????????7
 
@@ -98,6 +109,13 @@ export const userReducer = (state = initialState, action: any) => {//???????????
             }
 
         }
+        case IS_FETCHING: {
+        }
+            return {
+                ...state,
+                isFetching: action.isFetching
+            }
+
 
         default: {
             return state
@@ -129,24 +147,40 @@ export const toggleIsFollowingAC = (isFetching: boolean, userId: string) => {
     return {type: TOGGLE_IS_FOLLOWING, isFetching, userId}
 }
 
-
-/*
-export const getUsersThunk=(currentPage: number):
-    ThunkAction<void, AppRootStateType, unknown, AnyAction> =>{
-    return (dispatch: any) => {
-        console.log(2)
-
-
-        userAPI.getUsers(currentPage).then(data => {
-            console.log(data)
-            dispatch(setUserAC(data.items))
-            dispatch(setTotalCountAC(data.totalCount))
-
-
-        }).catch(error => {
-            console.log(error)
-        })
-    }
+export const isFetchingAC = (isFetching: boolean) => {
+    return {type: IS_FETCHING, isFetching}
 }
-*/
+
+
+export const getUsersThunk = (currentPage: number): AppThunk => async dispatch => {
+
+    dispatch(isFetchingAC(true))
+    const data = await userAPI.getUsers(currentPage)
+    dispatch(setUserAC(data.items))
+    dispatch(setTotalCountAC(data.totalCount))
+    dispatch(isFetchingAC(false))
+
+
+}
+
+export const unfollowThunk = (id: string): AppThunk => async dispatch => {
+    dispatch(toggleIsFollowingAC(true, id))
+    const data = await userAPI.deleteFollow(id)
+    if (data.resultCode === 0) {
+        dispatch(setUnfollowAC(id))
+        dispatch(toggleIsFollowingAC(false, id))
+    }
+
+}
+
+export const followThunk = (id: string): AppThunk => async dispatch => {
+    dispatch(toggleIsFollowingAC(true, id))
+    const data = await userAPI.postFollow(id)
+    if (data.resultCode === 0) {
+        dispatch(setFollowAC(id))
+        dispatch(toggleIsFollowingAC(false, id))
+    }
+
+
+}
 
