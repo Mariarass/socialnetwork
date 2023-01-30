@@ -1,9 +1,59 @@
-.login{
+.container {
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-
     height: 100vh;
+
+    width: 100vw;
+
+
+}
+
+.loginContainer {
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+
+}
+
+.photo {
+    width: 60%;
+    height: 100%;
+
+}
+
+.login {
+
+
+
+}
+
+.header {
+
+
+    font-size: 30px;
+
+    width: 250px;
+    margin-bottom: 30px;
+    font-family: var(--font);
+    text-align: start;
+
+
+}
+
+.error {
+    color: #ee2259;
+    font-family: var(--font);
+
+    width: 300px;
+    font-size: 10px;
+    padding: 0;
+    background-color: #fff;
 
 }

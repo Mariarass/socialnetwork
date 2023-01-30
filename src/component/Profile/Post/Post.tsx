@@ -1,35 +1,68 @@
 import React, {useState} from 'react';
-import {useDispatch, useSelector} from "react-redux";
-import {statusSelector} from "../../../redux/selectors/profile-selectors";
-import ItemPost from './ItemPost/ItemPost';
-import Input from "../../../ui/Input";
+import {useDispatch} from "react-redux";
 import {setPostAC} from "../../../redux/reducers/profile-reducer";
-import { v1 } from 'uuid';
+import {v1} from 'uuid';
+import s from './Post.module.css'
+import BorderColorIcon from '@mui/icons-material/BorderColor';
+import {IconButton} from "@mui/material";
+import {CssInput} from '../../../utils/style-for-mui/style-for-mui';
+import {UploadPhoto} from "../../../common/UploadPhoto/UploadPhoto";
 
-const Post = () => {
-    const posts = useSelector(statusSelector)
+export const Post = () => {
+
     const [postInput, setPostInput] = useState('')
+    const [imgPost, setImgPost] = useState('')
     const dispatch = useDispatch()
     const sendPost = () => {
-        const newPost = {
-            id: v1(),
-            message: postInput,
-            like: 0
-        }
-        dispatch(setPostAC(newPost))
-       setPostInput('')
 
+        if (postInput.trim()) {
+            const newPost = {
+                id: v1(),
+                message: postInput,
+                like: 0,
+                data: (new Date()).toISOString().slice(0, 10),
+                img: imgPost
+            }
+            dispatch(setPostAC(newPost))
+            setPostInput('')
+            setImgPost('')
+        }
+    }
+    const handleChange = (value: string) => {
+        setPostInput(value)
     }
 
 
     return (
-        <div>
-            <Input class={''} value={postInput} setValue={setPostInput}/>
-            <button onClick={sendPost}/>
-            {posts.map(el => <ItemPost key={el.id} post={el}/>)}
+        <div className={s.container}>
 
+            <CssInput
+                sx={{width: '100%', borderRadius: '10px'}}
+                value={postInput}
+                onChange={(e) => handleChange(e.target.value)}
+                onKeyPress={(event => {
+                    if (event.key === 'Enter') {
+                        sendPost()
+                    }
+                })}/>
+
+
+            {imgPost != '' && <div className={s.photoContainer}>
+                    <img className={s.photo} src={imgPost}/>
+                </div>
+            }
+
+            <div className={s.headerContainer}>
+                <UploadPhoto classname={'addPhotoPost'} callback={setImgPost}/>
+
+                <div className={s.flex}>
+                    <IconButton onClick={sendPost}>
+                        <BorderColorIcon className={s.createIcon}/>
+                    </IconButton>
+                    <p className={s.header}>Create post</p>
+                </div>
+
+            </div>
         </div>
     );
 };
-
-export default Post;

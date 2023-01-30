@@ -1,40 +1,91 @@
-.userContainer{
+.userContainer {
 
     width: 70%;
 
-    padding-top: 40px;
+    padding-top: 10px;
+
 
 }
-.userItem{
 
-    margin-bottom: 10px;
+.header {
+
+    font-family: var(--font);
+    margin-left: 20px;
+    font-size: 30px;
+
 }
-.linkUser{
+
+.users {
+
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
 
-    gap: 10px;
+.userItem {
+
+    width: 215px;
+    height: 226px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    background-color: white;
+}
+
+.linkUser {
 
     text-decoration: none;
     color: #2a2929;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.name{
+
+.linkUserProfile {
+    flex-direction: row;
+    gap: 20px;
+    text-align: start;
+
+
+}
+
+.name {
+
+
+    font-family: var(--font);
     font-weight: bolder;
-
-    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-align: start;
 }
-.description{
+
+.description {
 
 }
-.status{
 
-    margin-top :5px}
-.page{
+.status {
+
+    margin-top: 5px
+}
+
+.page {
 
     display: flex;
-    justify-content: center;
+    justify-content: start;
     margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 0.25rem;
+    color: #6c6d72;
+
 }
-.progress{
+
+.progress {
 
     min-height: 80vh;
     display: flex;

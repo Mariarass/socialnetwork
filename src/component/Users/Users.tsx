@@ -36,10 +36,12 @@ const Users = () => {
 
     return (
         <div className={s.userContainer}>
+            <h3 className={s.header}>Users</h3>
             <div className={s.page}>
                 <Pagination count={Math.round(totalUserCount / 10,)} onChange={changePage}/>
             </div>
-            <div>
+
+            <div className={s.users}>
                 {
                     isFetching
                         ? <div className={s.progress}>

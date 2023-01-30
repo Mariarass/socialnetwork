@@ -1,16 +1,24 @@
 .DescriptionContainer {
 
-    display: flex;
-    align-items: center;
-    margin: 0;
-    gap: 30px;
-    font-size: large;
-    height: 200px;
 
+    position: relative;
+    height: 400px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
 
 
 }
-.progress{
+
+.back {
+    background-color: #9a6969;
+    height: 280px;
+    width: 950px;
+    border-radius: 10px;
+}
+
+.progress {
 
     min-height: 80vh;
     display: flex;
@@ -24,98 +32,86 @@
     justify-content: center;
     min-height: 100vh;
 
+
 }
 
 .img {
     width: 120px;
     border-radius: 50%;
+    position: absolute;
+    top: 56%;
+    left: 4%;
+    border: 7px solid white;
 }
 
-.subContainer {
-
-    display: flex;
-    color: #828282;
-    gap: 20px;
-
-}
-
-.buy {
-    display: flex;
-    gap: 20px;
-
-
-}
 
 .name {
+    font-family: var(--font);
+    font-weight: bold;
+    margin: 0;
 
 
 }
 
 .description {
 
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    right: 2%;
+
+
+}
+
+
+.status {
+    font-family: var(--font);
+    margin-top: 10px;
+
 
 }
 
 .textDes {
-    color: #837478;
-    margin: 0;
-    cursor: pointer;
-
-
-}
-
-.tab {
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 700px;
-
-}
-
-.add {
-    width: 20px;
-}
-
-.lineContainer {
-display: flex;
-    justify-content: center;
-
-    gap: 10px;
-    flex-wrap: wrap;
-    width: 700px;
-
-
-
-  
-}
-.lineContainerEmpty{
-
-    width: 700px;
-
-    display: flex;
-    justify-content: center;
-
-}
-
-.photoItem {
-    width: 220px;
-    height: 220px;
-
+    font-family: var(--font);
+    margin-top: 10px;
     cursor: pointer;
 
 }
 
 .input {
-
+    margin-top: 10px;
     outline: none;
+    font-family: var(--font);
 
 }
 
-.status {
+.container {
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+    gap: 20px;
 
-    height: 34px;
-    margin: 0;
 
 
+}
+
+.postContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.loading{
+    width: 120px;
+    height: 120px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 56%;
+    left: 4%;
+    border: 7px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

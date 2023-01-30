@@ -1,7 +1,7 @@
 import {AppRootStateType} from "../store";
-import {currentProfile, PostType} from "../reducers/profile-reducer";
 
-export const profileSelectors = (state: AppRootStateType): currentProfile | null => state.profile.profile
-export const statusSelectors = (state: AppRootStateType): string | '' => state.profile.status
-export const isFetchingProfileSelector = (state: AppRootStateType): boolean => state.profile.isFetchingProfile
-export const statusSelector = (state: AppRootStateType): PostType[] => state.profile.post
+export const profileSelector = (state: AppRootStateType) => state.profile.profile
+export const statusSelector = (state: AppRootStateType) => state.profile.status
+export const isFetchingProfileSelector = (state: AppRootStateType) => state.profile.isFetchingProfile
+export const postSelector = (state: AppRootStateType) => state.profile.post
+export const isLoadingPhotoSelector = (state: AppRootStateType) => state.profile.isLoadingPhoto

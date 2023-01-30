@@ -8,7 +8,9 @@ import {
     followThunk,
     unfollowThunk,
 } from "../../../redux/reducers/user-reducer";
-
+import {ButtonFollow, CssButton} from "../../../utils/style-for-mui/style-for-mui";
+import avatar from '../../../assets/avatar.jpg'
+import {UserHeader} from "./UserHeader";
 
 const User = memo(() => {
 
@@ -20,7 +22,7 @@ const User = memo(() => {
     }
 
     const postFollow = (id: string) => {
-       dispatch(followThunk(id))
+        dispatch(followThunk(id))
     }
 
 
@@ -28,21 +30,12 @@ const User = memo(() => {
         users.user.map((el: any) =>
 
             <div key={el.id} className={s.userItem}>
-                <NavLink to={`/profile/${el.id}`} className={s.linkUser}>
-                    <Avatar sx={{width: 66, height: 66}} src={el.photos.large}/>
-                    <div className={s.description}>
-                        <p className={s.name}>{el.name}</p>
-                        <p className={s.status}>{el.status}</p>
-
-                    </div>
-
-                </NavLink>
-
+                <UserHeader user={el}/>
                 {el.followed
-                    ? <Button disabled={users.followingInProgress.some((id:string) => id === el.id)}
-                              onClick={() => deleteFollow(el.id)}> unfollow</Button>
-                    : <Button disabled={users.followingInProgress.some((id:string) => id === el.id)}
-                              onClick={() => postFollow(el.id)}>follow</Button>}
+                    ? <CssButton disabled={users.followingInProgress.some((id: string) => id === el.id)}
+                                 onClick={() => deleteFollow(el.id)}> unfollow</CssButton>
+                    : <CssButton disabled={users.followingInProgress.some((id: string) => id === el.id)}
+                                 onClick={() => postFollow(el.id)}>follow</CssButton>}
 
 
             </div>

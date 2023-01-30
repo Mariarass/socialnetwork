@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {withRedirect} from "../../HOC/withAuthRedirect";
 
-import Profile from './Profile';
+import {Profile} from './Profile';
 import {useDispatch, useSelector} from "react-redux";
 import {myIdSelectors} from "../../redux/selectors/auth-selectors";
-import {isFetchingProfileSelector, profileSelectors} from "../../redux/selectors/profile-selectors";
+import {isFetchingProfileSelector, profileSelector} from "../../redux/selectors/profile-selectors";
 
 import {getProfileThunk, getStatusThunk} from "../../redux/reducers/profile-reducer";
 import {useParams} from "react-router-dom";
@@ -16,7 +16,7 @@ const ProfileContainer = () => {
     /*  const ProfileWidthRedirect = withRedirect(<Profile/>);*/
     const isFetching = useSelector(isFetchingProfileSelector)
     const myId = useSelector(myIdSelectors)
-    const profile = useSelector(profileSelectors)
+    const profile = useSelector(profileSelector)
     let {userId}: any = useParams();
     const dispatch: AppDispatch = useDispatch()
 
@@ -26,19 +26,16 @@ const ProfileContainer = () => {
         dispatch(getStatusThunk(userId, myId))
     }, [userId])
 
+
+    if (Object.keys(profile).length == 0) {
+        return <></>
+    }
     return (
-        profile != null ?
-
-            <div>
-
-                {isFetching
-                    ? <div className={s.progress}><CircularProgress/></div>
-                    : <Profile/>}
+        isFetching
+            ? <div className={s.progress}><CircularProgress/></div>
+            : <Profile/>)
 
 
-            </div> :
-            <div></div>
-    );
-};
+}
 
 export default ProfileContainer;

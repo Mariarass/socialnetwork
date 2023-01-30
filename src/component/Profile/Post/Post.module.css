@@ -1,0 +1,106 @@
+.container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+
+
+}
+
+.headerContainer {
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+
+
+}
+
+.createIcon {
+    background-color: #f5f5f5;
+    padding: 5px;
+    border-radius: 50%;
+    fill: #8f0730;
+
+}
+
+.header {
+    font-family: var(--font);
+    color: #c9ced3;
+
+}
+
+.itemPost {
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px;
+
+}
+
+.postContainer {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font);
+
+}
+.flex{
+    display: flex;
+    align-items: start;
+    gap: 15px;
+}
+
+.name {
+    margin: 0;
+    font-weight: 600;
+
+}
+
+.message {
+    font-family: var(--font);
+    width: 450px;
+    display: block;
+    overflow: hidden;
+
+    line-height: 26px;
+    margin: 0;
+    margin-top: 10px;
+    color: #7a7a7a;
+
+
+
+}
+
+.panel {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.like {
+    font-family: var(--font);
+    margin: 0;
+
+
+}
+.data{
+    color: #6c6d72;
+    font-size: 12px;
+    margin-top:10px;
+}
+.photo{
+    object-fit: cover;
+
+    width: 300px;
+    height:100%;
+    border-radius: 10px;
+
+}
+.photoContainer{
+
+    display: flex;
+    justify-content: center;
+
+
+
+}

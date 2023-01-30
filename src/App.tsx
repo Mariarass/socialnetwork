@@ -1,13 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
-
-import Profile from "./component/Profile/Profile";
-
 import {Route, Router, Routes, useNavigate} from "react-router-dom";
 import Users from "./component/Users/Users";
 
 
-import Login from './component/Login/Login'
+import {Login} from './component/Login/Login'
 import ProfileContainer from "./component/Profile/ProfileContainer";
 import {useDispatch, useSelector} from "react-redux";
 import {isAuthSelector} from "./redux/selectors/auth-selectors";
@@ -26,14 +23,12 @@ function App() {
     }, [])
 
 
-
     return (
 
 
         <div className="AppContainer">
-            {isAuth&&<SideBar/>}
+            {isAuth && <SideBar/>}
             {isAuth ?
-
                 <Routes>
                     <Route path="/profile/:userId" element={<ProfileContainer/>}/>
                     <Route path="/profile" element={<ProfileContainer/>}/>

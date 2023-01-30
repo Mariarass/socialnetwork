@@ -1,5 +1,4 @@
-import axios from "axios";
-
+import axios, {AxiosResponse} from 'axios'
 
 const instance = axios.create({
     withCredentials: true,
@@ -52,6 +51,30 @@ export const userAPI = {
     },
     logout: () => {
         return instance.delete(`auth/login`).then(res => res.data)
+    },
+    savePhoto: (file: string) => {
+        const formData = new FormData()
+        formData.append('image', file)
+        return instance.put <any, AxiosResponse<ResponseType<{ photos: DataPhotos }>>>('profile/photo', formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        }).then((res) => {
+
+            return res.data
+        })
     }
 
+}
+
+export type ResponseType<D = {}> = {
+    resultCode: number
+    messages: Array<string>
+    fieldsErrors: Array<string>
+    data: D
+}
+
+export type DataPhotos = {
+    large: string
+    small: string
 }

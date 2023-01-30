@@ -1,36 +1,33 @@
 import React, {useEffect, useState} from 'react';
-import Description from "./Description/Description";
+import {Description} from "./Description/Description";
 import s from './Profile.module.css'
-
-import { useSelector} from "react-redux";
-
-import {profileSelectors} from "../../redux/selectors/profile-selectors";
-
-import Post from "./Post/Post";
-
-export type LineType = {
-    id: number
-    url: any
-    description: string
-    date: string
-}
-
-type ProfileType = {
-    modal?: boolean
-    setModal?: (value: boolean) => void
-}
+import {useSelector} from "react-redux";
+import {postSelector} from "../../redux/selectors/profile-selectors";
+import {Post} from "./Post/Post";
+import {Friends} from "./Friends/Friends";
+import {ItemPost} from "./Post/ItemPost/ItemPost";
 
 
-const Profile: React.FC<ProfileType> = ({modal, setModal}) => {
-    const profile = useSelector(profileSelectors)
+export const Profile = () => {
 
+    const posts = useSelector(postSelector)
+    console.log(posts)
     return (
 
         <div className={s.profileContainer}>
             <div className={s.profile}>
 
-                <Description profile={profile}/>
-                <Post/>
+                <Description/>
+                <div className={s.container}>
+                    <Friends/>
+                    <div className={s.postContainer}>
+                        <Post/>
+                        {posts.map(el => <ItemPost key={el.id} post={el}/>)}
+
+                    </div>
+
+                </div>
+
 
             </div>
         </div>
@@ -40,4 +37,3 @@ const Profile: React.FC<ProfileType> = ({modal, setModal}) => {
         ;
 };
 
-export default Profile;

@@ -7,9 +7,9 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import {AccountCircle, AddAPhoto, Group, Logout, Message, Settings} from "@mui/icons-material";
+import { Group, Logout, Message, Settings} from "@mui/icons-material";
 import {NavLink} from "react-router-dom";
-import {Avatar, CSSObject, Drawer} from "@mui/material";
+import {Avatar, Drawer} from "@mui/material";
 import ava from '../../assets/ava.jpg'
 import {AppDispatch} from "../../redux/store";
 import {useDispatch} from "react-redux";
@@ -22,7 +22,6 @@ const DrawerHeader = styled('div')(({theme}) => ({
     display: 'flex',
     alignItems: 'center',
     padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
     ...theme.mixins.toolbar,
     justifyContent: 'flex-end',
 }));
@@ -31,6 +30,7 @@ const DrawerHeader = styled('div')(({theme}) => ({
 
 export const SideBar=()=>{
     const dispatch:AppDispatch=useDispatch()
+
     const logout = () => {
         dispatch(logoutThunk())
     }

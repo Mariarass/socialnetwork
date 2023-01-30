@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 import s from "../../Profile.module.css";
 import {useDispatch, useSelector} from "react-redux";
-import {statusSelectors} from "../../../../redux/selectors/profile-selectors";
-import { updateStatusThunk} from "../../../../redux/reducers/profile-reducer";
+import {statusSelector} from "../../../../redux/selectors/profile-selectors";
+import {updateStatusThunk} from "../../../../redux/reducers/profile-reducer";
 import {AppDispatch} from "../../../../redux/store";
 
 const SpanInput = () => {
 
     const [toggle, setToggle] = useState(true)
-    const status = useSelector(statusSelectors)
+    const status = useSelector(statusSelector)
     const [profileStatus, setProfileStatus] = useState(status)
     const dispatch: AppDispatch = useDispatch()
 

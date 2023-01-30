@@ -16,8 +16,12 @@ export type UserType = {
     id: number
     name: string
     followed: boolean
-    photo: string
+    photos: {
+        small: string,
+        large: string
+    }
     status: string
+
 }
 export type UserReducerType = {
     user: UserType[]
@@ -110,11 +114,12 @@ export const userReducer = (state = initialState, action: any) => {//???????????
 
         }
         case IS_FETCHING: {
-        }
+
             return {
                 ...state,
                 isFetching: action.isFetching
             }
+        }
 
 
         default: {

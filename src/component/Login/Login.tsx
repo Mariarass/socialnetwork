@@ -1,31 +1,18 @@
 import {useFormik} from 'formik';
-import {Button, Checkbox, FormControlLabel, IconButton, TextField} from "@mui/material";
-import * as yup from 'yup';
+import {Checkbox, FormControlLabel, IconButton} from "@mui/material";
 import React, {useState} from 'react';
 import s from './Login.module.css'
 import {Visibility, VisibilityOff} from "@mui/icons-material";
 import {AppDispatch} from "../../redux/store";
 import {useDispatch} from "react-redux";
 import {loginThunk} from "../../redux/reducers/auth-reducer";
+import loginPhoto from '../../assets/login.jpg'
+import {pink} from '@mui/material/colors';
+import {validationSchema} from '../../utils/validation/validation';
+import {CssButton, CssInput} from '../../utils/style-for-mui/style-for-mui';
 
-type Values = {
-    email: string;
-    password: string
 
-};
-const validationSchema = yup.object({
-    email: yup
-        .string()
-        .required('Email is required')
-        .email('Enter a valid email'),
-
-    password: yup
-        .string()
-        .min(8, 'Password should be of minimum 8 characters length')
-        .required('Password is required'),
-});
-
-const Login = () => {
+export const Login = () => {
     const [show, setShow] = useState(false);
     const handleClick = () => setShow(!show);
     const dispatch: AppDispatch = useDispatch()
@@ -46,64 +33,77 @@ const Login = () => {
     });
 
     return (
-        <div className={s.login}>
-            <div>
-                <h3>Login</h3>
-                <form onSubmit={formik.handleSubmit}>
-                    <div>
+        <div className={s.container}>
+            <img src={loginPhoto} className={s.photo}/>
+            <div className={s.loginContainer}>
+                <div className={s.login}>
+                    <h3 className={s.header}>Login into
+                        your account</h3>
+
+                    <form onSubmit={formik.handleSubmit}>
+                        <div className={s.input}>
+                            <CssInput
+                                name="email"
+                                placeholder={'Your email address'}
+                                value={formik.values.email}
+                                onChange={formik.handleChange}
+                                error={formik.touched.email && Boolean(formik.errors.email)}
+                            />
+                            <p className={s.error}>
+                                {formik.touched.email && formik.errors.email}
+                            </p>
+                        </div>
+                        <div>
+                            <CssInput
+
+                                id="password"
+                                name="password"
+                                placeholder="Password"
+                                type={show ? "text" : "password"}
+                                value={formik.values.password}
+                                onChange={formik.handleChange}
+                                error={formik.touched.password && Boolean(formik.errors.password)}
+
+                                InputProps={{
+                                    endAdornment: (
+                                        <IconButton onClick={handleClick}>
+                                            {show ? <VisibilityOff/> : <Visibility/>}
+
+                                        </IconButton>
+                                    ),
+                                }}
+                            />
+                            <p className={s.error}>
+                                {formik.touched.password && formik.errors.password}
+                            </p>
+                        </div>
+                        <p className={s.error}>
+                            {formik.status != undefined && formik.status.message}
+                        </p>
 
 
-                        <TextField
-                            sx={{mb: 4, width: 400}}
-                            name="email"
-                            label="Email"
-                            value={formik.values.email}
+                        <FormControlLabel control={<Checkbox
+                            name="rememberMe"
+                            checked={formik.values.rememberMe}
                             onChange={formik.handleChange}
-                            error={formik.touched.email && Boolean(formik.errors.email)}
-                            helperText={formik.touched.email && formik.errors.email}
-                        />
-
-                    </div>
-                    <div>
-                        <TextField
-                            sx={{mb: 4, width: 400}}
-                            id="password"
-                            name="password"
-                            label="Password"
-                            type={show ? "text" : "password"}
-                            value={formik.values.password}
-                            onChange={formik.handleChange}
-                            error={formik.touched.password && Boolean(formik.errors.password)}
-                            helperText={formik.touched.password && formik.errors.password}
-                            InputProps={{
-                                endAdornment: (
-                                    <IconButton onClick={handleClick}>
-                                        {show ? <VisibilityOff/> : <Visibility/>}
-
-                                    </IconButton>
-                                ),
+                            sx={{
+                                color: pink[800],
+                                '&.Mui-checked': {
+                                    color: pink[600],
+                                },
                             }}
-                        /></div>
-                    <p>
-                        {formik.status!= undefined && formik.status.message}
-                    </p>
+                        />} label="Remember me"/>
 
+                        <CssButton fullWidth type="submit">
+                            Submit
+                        </CssButton>
 
-                    <FormControlLabel control={<Checkbox
+                    </form>
+                </div>
 
-                        name="rememberMe"
-                        checked={formik.values.rememberMe}
-                        onChange={formik.handleChange}
-                    />} label="Remember me"/>
-
-                    <Button color="primary" variant="contained" fullWidth type="submit">
-                        Submit
-                    </Button>
-
-                </form>
             </div>
+
+
         </div>
     );
 };
-
-export default Login
