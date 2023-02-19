@@ -4,7 +4,9 @@
 :root {
     --font: 'Montserrat', sans-serif;
 }
-
+body{
+    background-color: #f5f6f8;
+}
 .AppContainer {
     background-color: #f5f6f8;
 

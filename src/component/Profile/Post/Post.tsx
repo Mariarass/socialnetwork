@@ -15,7 +15,7 @@ export const Post = () => {
     const dispatch = useDispatch()
     const sendPost = () => {
 
-        if (postInput.trim()) {
+        if (postInput.trim()||imgPost!='') {
             const newPost = {
                 id: v1(),
                 message: postInput,

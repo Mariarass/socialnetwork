@@ -21,6 +21,7 @@ export type PostType = {
     img: string
 }
 export type UserReducerType = {
+
     post: PostType[]
     profile: currentProfile
     status: string
@@ -31,11 +32,11 @@ export type UserReducerType = {
 
 const initialState: UserReducerType = {
     post: [
-        {id: "1", message: 'hello', like: 10, data: '2023-01-29', img: ''},
+        {id: "1", message: 'hello,it`s me', like: 10, data: '2023-01-29', img: 'https://sun9-69.userapi.com/impg/FfcMcjiYL9IpAG5gn29wTgX2OKQQA8uAc4up6g/baHXfSvyO-A.jpg?size=2560x1280&quality=95&sign=1da418a5c36eef4195a9ae4f4549e499&type=album'},
         {
             id: "2", message: 'I\'m a result oriented front-end developer with\n' +
                 'experience in creating Landing Pages and SPA, using\n' +
-                'React(JS/TS), Redux, HTML & CSS', like: 100, data: '2023-01-29', img: ''
+                'React(JS/TS), Redux, HTML & CSS', like: 100, data: '2023-01-29', img: 'https://sun9-35.userapi.com/impg/2K1FZhoa6lC9P0IGzQsDb3cml9GpnwLftby9AA/a5ZPBKwybY8.jpg?size=720x400&quality=95&sign=8cacbd17422b800685e627f8ee63c772&type=album'
         },
     ],
     profile: {} as currentProfile,

@@ -13,7 +13,7 @@ type UserHeaderType = {
 export const UserHeader: FC<UserHeaderType> = ({user, profile}) => {
     return (
         <NavLink to={`/profile/${user.id}`} className={!profile ? s.linkUser : s.linkUser + ' ' + s.linkUserProfile}>
-            <Avatar sx={{width: 66, height: 66}} src={user.photos.large ? user.photos.large : avatar}/>
+            <Avatar sx={{width: 66, height: 66}} src={user.photos.large || avatar}/>
             <p className={s.name}>{user.name}</p>
         </NavLink>
     );

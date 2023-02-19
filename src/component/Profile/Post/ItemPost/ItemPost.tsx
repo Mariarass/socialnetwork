@@ -35,7 +35,7 @@ export const ItemPost: FC<{ post: PostType }> = ({post}) => {
             <div className={s.postContainer}>
                 <div className={s.flex}>
                     <Avatar sx={{width: 55, height: 55}}
-                            src={currentProfile.photos.large ? currentProfile.photos.large : avatar}/>
+                            src={currentProfile.photos.large || avatar}/>
                     <div>
                         <p className={s.name}>{currentProfile.fullName}</p>
                         <p className={s.data}>{post.data}</p>

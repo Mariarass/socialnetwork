@@ -1,41 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74e830c7-e3be-43bf-8f0c-24e9f5c2ce15" name="Changes" comment="3">
-      <change afterPath="$PROJECT_DIR$/src/assets/avatar.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/login.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/login2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/UploadPhoto/UploadPhoto.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/UploadPhoto/UploadPhoto.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/Profile/Friends/Friends.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/Profile/Friends/Friends.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/Profile/Post/MenuPost/MenuPost.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/Profile/Post/Post.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/Users/User/UserHeader.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/convertFile/convert-file.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/style-for-mui/style-for-mui.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/validation/validation.ts" afterDir="false" />
+    <list default="true" id="74e830c7-e3be-43bf-8f0c-24e9f5c2ce15" name="Changes" comment="feat:add post">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/API.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/API.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/avatar.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/avatar.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Dialog/Contact/Contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Dialog/Contact/Contact.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Dialog/Dialog.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Dialog/Dialog.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Dialog/Dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Dialog/Dialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Dialog/DialogContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Dialog/DialogContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Login/Login.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Login/Login.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Login/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Profile/Description/Description.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Profile/Description/Description.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Profile/Description/SpanInput/SpanInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Profile/Description/SpanInput/SpanInput.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Profile/Post/ItemPost/ItemPost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Profile/Post/ItemPost/ItemPost.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Profile/Post/Post.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Profile/Post/Post.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Profile/Post/Post.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Profile/Post/Post.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Profile/Profile.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Profile/Profile.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Profile/Profile.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Profile/ProfileContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Profile/ProfileContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/SideBar/SideBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/SideBar/SideBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Users/User/User.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Users/User/User.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Users/Users.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Users/Users.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Users/Users.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Users/User/UserHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Users/User/UserHeader.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducers/profile-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/profile-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/user-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/user-reducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/selectors/profile-selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectors/profile-selectors.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/selectors/user-selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectors/user-selectors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/Input.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Input.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/validation/validation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validation/validation.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,9 +34,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
+        <option value="CSS File" />
         <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -82,8 +70,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\maria_87\Desktop\учеба\incubator\socialnetwork\src\common" />
       <recent name="C:\Users\maria_87\Desktop\учеба\incubator\socialnetwork\src\assets" />
+      <recent name="C:\Users\maria_87\Desktop\учеба\incubator\socialnetwork\src\common" />
       <recent name="C:\Users\maria_87\Desktop\учеба\incubator\socialnetwork\src\component\Profile\Post" />
       <recent name="C:\Users\maria_87\WebstormProjects\socialnetwork" />
     </key>
@@ -161,7 +149,11 @@
       <workItem from="1674973759152" duration="13679000" />
       <workItem from="1674996773258" duration="5230000" />
       <workItem from="1675063583369" duration="33000" />
-      <workItem from="1675064129443" duration="12160000" />
+      <workItem from="1675064129443" duration="20967000" />
+      <workItem from="1675165255754" duration="9000" />
+      <workItem from="1675773657141" duration="473000" />
+      <workItem from="1676212479415" duration="784000" />
+      <workItem from="1676796557512" duration="3114000" />
     </task>
     <task id="LOCAL-00001" summary="2">
       <created>1670405467593</created>
@@ -184,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672920933065</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat:add post">
+      <created>1675081830576</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675081830576</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +203,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2" />
     <MESSAGE value="3" />
-    <option name="LAST_COMMIT_MESSAGE" value="3" />
+    <MESSAGE value="feat:add post" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:add post" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

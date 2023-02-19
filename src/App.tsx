@@ -30,6 +30,7 @@ function App() {
             {isAuth && <SideBar/>}
             {isAuth ?
                 <Routes>
+
                     <Route path="/profile/:userId" element={<ProfileContainer/>}/>
                     <Route path="/profile" element={<ProfileContainer/>}/>
                     <Route path="/message" element={<Dialog/>}/>

@@ -13,13 +13,12 @@ import {CircularProgress} from "@mui/material";
 import {AppDispatch} from "../../redux/store";
 
 const ProfileContainer = () => {
-    /*  const ProfileWidthRedirect = withRedirect(<Profile/>);*/
+
     const isFetching = useSelector(isFetchingProfileSelector)
     const myId = useSelector(myIdSelectors)
     const profile = useSelector(profileSelector)
     let {userId}: any = useParams();
     const dispatch: AppDispatch = useDispatch()
-
 
     useEffect(() => {
         dispatch(getProfileThunk(userId, myId))

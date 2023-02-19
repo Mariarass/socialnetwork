@@ -1,5 +1,5 @@
 import {useFormik} from 'formik';
-import {Checkbox, FormControlLabel, IconButton} from "@mui/material";
+import {Alert, Checkbox, FormControlLabel, IconButton} from "@mui/material";
 import React, {useState} from 'react';
 import s from './Login.module.css'
 import {Visibility, VisibilityOff} from "@mui/icons-material";
@@ -99,6 +99,13 @@ export const Login = () => {
                         </CssButton>
 
                     </form>
+                    <p className={s.info}>
+                        Welcome to my social network!<br/>
+                        SOCIAL NETWORK UNDER DEVELOPMENT<br/>
+                        Test account<br/>
+                        Email: free@samuraijs.com<br/>
+                        Password: free
+                    </p>
                 </div>
 
             </div>

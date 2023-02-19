@@ -6,12 +6,14 @@ import {postSelector} from "../../redux/selectors/profile-selectors";
 import {Post} from "./Post/Post";
 import {Friends} from "./Friends/Friends";
 import {ItemPost} from "./Post/ItemPost/ItemPost";
+import {useParams} from "react-router-dom";
 
 
 export const Profile = () => {
 
     const posts = useSelector(postSelector)
-    console.log(posts)
+    let {userId}: any = useParams();
+
     return (
 
         <div className={s.profileContainer}>
@@ -21,7 +23,7 @@ export const Profile = () => {
                 <div className={s.container}>
                     <Friends/>
                     <div className={s.postContainer}>
-                        <Post/>
+                        {userId===undefined && <Post/>}
                         {posts.map(el => <ItemPost key={el.id} post={el}/>)}
 
                     </div>

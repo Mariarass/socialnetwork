@@ -8,7 +8,7 @@ export const validationSchema = yup.object({
 
     password: yup
         .string()
-        .min(8, 'Password should be of minimum 8 characters length')
+        .min(3, 'Password should be of minimum 3 characters length')
         .required('Password is required'),
 });
 

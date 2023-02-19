@@ -16,6 +16,7 @@
     height: 280px;
     width: 950px;
     border-radius: 10px;
+    object-fit: cover;
 }
 
 .progress {
@@ -31,6 +32,7 @@
     display: flex;
     justify-content: center;
     min-height: 100vh;
+
 
 
 }
